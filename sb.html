@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dale's Starbucks Cafe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3e8e41, #c9f7a8);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Makes content grow and pushes footer to the bottom */
+            align-items: center;
+        }
+
+        header {
+            background-color: #006b3f;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            margin-top: 20px;
+            background-color: #004d28;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: inline-flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #007f44;
+        }
+
+        .main-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 50px 20px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #006b3f;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .product-card .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .product-card button {
+            background-color: #006b3f;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background-color: #004d28;
+        }
+
+        footer {
+            background-color: #006b3f;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Dale's Starbucks Cafe
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="heading">Our Coffee Menu</h1>
+
+        <div class="product-list">
+            <div class="product-card">
+                <img src="https://assets.iceland.co.uk/i/iceland/starbucks_caramel_macchiato_flavoured_milk_iced_coffee_220ml_84140_T1.jpg?$pdpzoom$" alt="Coffee 1">
+                <h3>Caramel Macchiato</h3>
+                <p>A sweet and creamy coffee with caramel drizzle.</p>
+                <div class="price">$4.50</div>
+                <button>Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/OIP.2uEySm-NAnoLKewZdspyLQHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="Coffee 2">
+                <h3>Caffe Latte</h3>
+                <p>A smooth and velvety coffee with a perfect balance of espresso and steamed milk.</p>
+                <div class="price">$4.00</div>
+                <button>Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/OIP.FMNwo_SjJirm8CHvsWxArAAAAA?w=400&h=400&rs=1&pid=ImgDetMain" alt="Coffee 3">
+                <h3>Cappuccino</h3>
+                <p>A classic shot of rich, bold espresso.</p>
+                <div class="price">$3.00</div>
+                <button>Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Starbucks. All rights reserved.
+    </footer>
+</body>
+</html>
+
+<script type="module">
+  import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+
+  const widget = await Chatbox.initBubble({
+    agentId: 'cm4bfwrwh0mer2056w0qtxpbe',
+    
+    // optional 
+    // If provided will create a contact for the user and link it to the conversation
+    contact: {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'customer@email.com',
+      phoneNumber: '+33612345644',
+      userId: '42424242',
+    },
+    // optional
+    // Override initial messages
+    initialMessages: [
+      'Hello Georges how are you doing today?',
+      'How can I help you ?',
+    ],
+    // optional
+    // Provided context will be appended to the Agent system prompt
+    context: "The user you are talking to is John. Start by Greeting him by his name.",
+  });
+
+  // open the chat bubble
+  widget.open();
+
+  // close the chat bubble
+  widget.close()
+
+  // or 
+  widget.toggle()
+</script>
